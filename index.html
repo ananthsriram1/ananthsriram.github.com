@@ -8,18 +8,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'packers-green': '#203731',
+                        'packers-gold': '#FFB612',
+                        'light-cream': '#F9FBF8',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
-            color: #334155; /* slate-700 */
+            background-color: #F9FBF8; /* light-cream */
+            color: #374151; /* gray-700 */
         }
         .section-title {
-            color: #0f172a; /* slate-900 */
+            color: #111827; /* gray-900 */
         }
         .card {
             background-color: #ffffff;
-            border: 1px solid #e2e8f0; /* slate-200 */
+            border: 1px solid #e5e7eb; /* gray-200 */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card:hover {
@@ -27,31 +40,38 @@
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
         .tag {
-            background-color: #f1f5f9; /* slate-100 */
-            color: #475569; /* slate-600 */
+            background-color: #f3f4f6; /* gray-100 */
+            color: #4b5563; /* gray-600 */
         }
         .icon-link:hover svg {
             transform: scale(1.1);
+        }
+        .gallery-img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
         }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Header & Navigation -->
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-slate-800">Ananth Sriram</a>
+            <a href="#" class="text-xl font-bold text-packers-green">Ananth Sriram</a>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#about" class="text-slate-600 hover:text-indigo-600 transition-colors">About</a>
-                <a href="#projects" class="text-slate-600 hover:text-indigo-600 transition-colors">Projects</a>
-                <a href="#research" class="text-slate-600 hover:text-indigo-600 transition-colors">Research</a>
-                <a href="#interests" class="text-slate-600 hover:text-indigo-600 transition-colors">Interests</a>
+                <a href="#about" class="text-gray-600 hover:text-packers-green transition-colors">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-packers-green transition-colors">Projects</a>
+                <a href="#gallery" class="text-gray-600 hover:text-packers-green transition-colors">Gallery</a>
+                <a href="#interests" class="text-gray-600 hover:text-packers-green transition-colors">Interests</a>
             </div>
             <div class="hidden md:flex items-center space-x-4">
-                <a href="./Ananth_Sriram_resume.pdf" target="_blank" class="text-slate-600 hover:text-indigo-600 transition-colors text-sm font-semibold">
+                <a href="./Ananth_Sriram_resume.pdf" target="_blank" class="text-packers-green hover:text-gray-900 transition-colors text-sm font-semibold">
                     Resume
                 </a>
-                <a href="mailto:asriram2@terpmail.umd.edu" class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">
+                <a href="mailto:asriram2@terpmail.umd.edu" class="bg-packers-green text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors">
                     Contact Me
                 </a>
             </div>
@@ -62,15 +82,15 @@
 
         <!-- Hero Section -->
         <section id="hero" class="text-center mb-20 md:mb-32">
-            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-4 leading-tight">AI Systems Engineer & Researcher</h1>
-            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">AI Systems Engineer & Researcher</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Building and deploying scalable, end-to-end ML systems. Passionate about MLOps, NLP, and the infrastructure that makes AI work in the real world.
             </p>
             <div class="flex justify-center items-center space-x-6">
-                <a href="https://www.linkedin.com/in/ananthsriram1/" target="_blank" class="text-slate-500 hover:text-indigo-600 transition-colors icon-link">
+                <a href="https://www.linkedin.com/in/ananthsriram1/" target="_blank" class="text-gray-500 hover:text-packers-green transition-colors icon-link">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
-                <a href="https://github.com/ananthsriram1" target="_blank" class="text-slate-500 hover:text-indigo-600 transition-colors icon-link">
+                <a href="https://github.com/ananthsriram1" target="_blank" class="text-gray-500 hover:text-packers-green transition-colors icon-link">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 </a>
             </div>
@@ -79,7 +99,7 @@
         <!-- About Section -->
         <section id="about" class="mb-20 md:mb-32 scroll-mt-20">
             <h2 class="text-3xl font-bold text-center mb-12 section-title">About Me</h2>
-            <div class="max-w-4xl mx-auto text-slate-600 leading-relaxed space-y-6 text-lg text-center">
+            <div class="max-w-4xl mx-auto text-gray-600 leading-relaxed space-y-6 text-lg text-center">
                 <p>
                     I'm a Computer Science student at the University of Maryland, graduating in May 2026. I'm passionate about creating ML applications for things I'm passionate about, whether it's for personal interests or for issues that I care about!
                 </p>
@@ -96,9 +116,9 @@
                 
                 <!-- Project Card 1: Music Detection App -->
                 <div class="card rounded-xl p-6 shadow-sm">
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">AI Music Detection App</h3>
-                    <p class="text-slate-500 mb-4">Personal Project</p>
-                    <p class="text-slate-600 mb-6">Developed a full-stack app to classify music as AI-generated or human-made by analyzing spectrograms with a CNN, achieving 92% accuracy. Built with a React frontend and Flask backend.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">AI Music Detection App</h3>
+                    <p class="text-gray-500 mb-4">Personal Project</p>
+                    <p class="text-gray-600 mb-6">Developed a full-stack app to classify music as AI-generated or human-made by analyzing spectrograms with a CNN, achieving 92% accuracy. Built with a React frontend and Flask backend.</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">PyTorch</span>
                         <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">React.js</span>
@@ -106,7 +126,37 @@
                         <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">Computer Vision</span>
                     </div>
                 </div>
+                
+                <!-- Add more project cards here -->
 
+            </div>
+        </section>
+
+        <!-- NEW Gallery Section -->
+        <section id="gallery" class="mb-20 md:mb-32 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">From the Trailhead</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto text-center mb-12">
+                When I'm not in front of a screen, I love getting outdoors. Here are a few moments from my favorite trails and national parks.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x400/203731/FFFFFF?text=Yosemite" alt="Nature photo from Yosemite" class="w-full h-full object-cover gallery-img">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x400/FFB612/000000?text=Zion" alt="Nature photo from Zion" class="w-full h-full object-cover gallery-img">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x400/203731/FFFFFF?text=Redwoods" alt="Nature photo from Redwoods" class="w-full h-full object-cover gallery-img">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x400/FFB612/000000?text=Grand+Canyon" alt="Nature photo from Grand Canyon" class="w-full h-full object-cover gallery-img">
+                </div>
+                 <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x400/203731/FFFFFF?text=Shenandoah" alt="Nature photo from Shenandoah" class="w-full h-full object-cover gallery-img">
+                </div>
+                 <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x400/FFB612/000000?text=Acadia" alt="Nature photo from Acadia" class="w-full h-full object-cover gallery-img">
+                </div>
             </div>
         </section>
 
@@ -114,19 +164,19 @@
         <section id="research" class="mb-20 md:mb-32 scroll-mt-20">
             <h2 class="text-3xl font-bold text-center mb-12 section-title">Research & Reading</h2>
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-bold text-slate-800">Automating Scientific Discovery</h3>
-                    <p class="text-slate-600 leading-relaxed">
+                <div class="space-y-4 text-left">
+                    <h3 class="text-2xl font-bold text-gray-800">Automating Scientific Discovery</h3>
+                    <p class="text-gray-600 leading-relaxed">
                         As a Research Intern at the University of Maryland, I'm currently spearheading a project to automate insight discovery from scientific literature. My work involves architecting a data pipeline that uses Generative AI and the ArXiv API to extract, analyze, and validate agricultural indices from research papers against real-world satellite data.
                     </p>
-                    <p class="text-slate-600 leading-relaxed">
-                        This work builds on my foundational research which led to my co-authored publication, <a href="https://extension.umd.edu/resource/overview-drones-agriculture-fs-2024-0705/" target="_blank" class="text-indigo-600 font-semibold hover:underline">"An Overview of Drones in Agriculture."</a>
+                    <p class="text-gray-600 leading-relaxed">
+                        This work builds on my foundational research which led to my co-authored publication, <a href="https://extension.umd.edu/resource/overview-drones-agriculture-fs-2024-0705/" target="_blank" class="text-packers-green font-semibold hover:underline">"An Overview of Drones in Agriculture."</a>
                     </p>
                 </div>
-                <div class="card rounded-xl p-8 text-center bg-slate-50 border-dashed">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">My Digital Bookshelf</h3>
-                    <p class="text-slate-600 mb-6">I maintain a public repository of my notes and analysis on the ML papers I'm reading. It's my way of learning in public and solidifying my understanding of the field's foundations.</p>
-                    <a href="https://github.com/ananthsriram1/ML-Paper-Notes" target="_blank" class="inline-block bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-900 transition-colors">
+                <div class="card rounded-xl p-8 text-center bg-white border-dashed">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">My Digital Bookshelf</h3>
+                    <p class="text-gray-600 mb-6">I maintain a public repository of my notes and analysis on the ML papers I'm reading. It's my way of learning in public and solidifying my understanding of the field's foundations.</p>
+                    <a href="https://github.com/ananthsriram1/ML-Paper-Notes" target="_blank" class="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
                         View My Paper Notes
                     </a>
                 </div>
@@ -135,19 +185,31 @@
 
         <!-- Niche Interests Section -->
         <section id="interests" class="text-center scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-12 section-title">Beyond the Code</h2>
-            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
-                When I'm not building systems or reading papers, you can usually find me deep in the world of sports analytics. I'm a huge football and basketball fan, and I love applying data and ML concepts to understand the game on a deeper level.
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">My Other Playbooks</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                When I'm not building systems, you can find me diving into one of my other passions. I'm a die-hard Packers fan, a music nerd always looking for the next great album, and a tech enthusiast who loves tinkering with new hardware and software.
             </p>
-            <div class="flex justify-center space-x-4">
-                <div class="bg-white p-4 rounded-full shadow-sm border border-slate-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14H5v-4h2.41L11 6.41V17.59zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+            <div class="flex justify-center space-x-8">
+                <!-- Packers Icon -->
+                <div class="text-center">
+                    <div class="bg-white p-4 rounded-full shadow-sm border border-gray-200 inline-block">
+                        <svg class="h-8 w-8 text-packers-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12h2v4h-2zm0 6h2v2h-2z"/></svg>
+                    </div>
+                    <p class="mt-2 text-sm font-medium text-gray-700">Go Pack Go</p>
                 </div>
-                <div class="bg-white p-4 rounded-full shadow-sm border border-slate-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L8 12v7.93zM13 4.07c.83.2 1.6.52 2.27.93l-2.27 2.27V4.07zM4.26 14.47c-.17-.51-.26-1.06-.26-1.64 0-3.31 2.69-6 6-6 .69 0 1.35.12 1.97.33L4.26 14.47zM13 19.94v-7.07l7.07 7.07c-.47.23-1 .4-1.57.53-.59.13-1.2.2-1.84.2-1.29 0-2.51-.31-3.66-.87z"/></svg>
+                <!-- Music Icon -->
+                <div class="text-center">
+                    <div class="bg-white p-4 rounded-full shadow-sm border border-gray-200 inline-block">
+                        <svg class="h-8 w-8 text-packers-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-7C10.62 9.5 9.5 10.62 9.5 12s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S13.38 9.5 12 9.5z"/></svg>
+                    </div>
+                     <p class="mt-2 text-sm font-medium text-gray-700">Music Nerd</p>
                 </div>
-                <div class="bg-white p-4 rounded-full shadow-sm border border-slate-200">
-                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57l3.43 3.43L7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+                <!-- Tech Icon -->
+                <div class="text-center">
+                    <div class="bg-white p-4 rounded-full shadow-sm border border-gray-200 inline-block">
+                        <svg class="h-8 w-8 text-packers-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 6h16v2H4V6zm0 12v-6h16v6H4z"/></svg>
+                    </div>
+                     <p class="mt-2 text-sm font-medium text-gray-700">Tech Enthusiast</p>
                 </div>
             </div>
         </section>
@@ -155,7 +217,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-800 text-slate-400">
+    <footer class="bg-packers-green text-gray-300">
         <div class="container mx-auto px-6 py-8 text-center">
             <div class="flex justify-center items-center space-x-6 mb-4">
                 <a href="https://www.linkedin.com/in/ananthsriram1/" target="_blank" class="hover:text-white transition-colors">
@@ -170,7 +232,7 @@
                     Email
                 </a>
             </div>
-            <p>&copy; 2025 Ananth Sriram. Built with passion and a little bit of code.</p>
+            <p>&copy; 2025 Ananth Sriram. Go Pack Go.</p>
         </div>
     </footer>
 
