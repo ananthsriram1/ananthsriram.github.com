@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananth Sriram | AI Systems Engineer & Researcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        .section-title {
+            color: #0f172a; /* slate-900 */
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0; /* slate-200 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .tag {
+            background-color: #f1f5f9; /* slate-100 */
+            color: #475569; /* slate-600 */
+        }
+        .icon-link:hover svg {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-800">Ananth Sriram</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-slate-600 hover:text-indigo-600 transition-colors">About</a>
+                <a href="#projects" class="text-slate-600 hover:text-indigo-600 transition-colors">Projects</a>
+                <a href="#research" class="text-slate-600 hover:text-indigo-600 transition-colors">Research</a>
+                <a href="#interests" class="text-slate-600 hover:text-indigo-600 transition-colors">Interests</a>
+            </div>
+            <a href="mailto:asriram2@terpmail.umd.edu" class="hidden md:block bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">
+                Contact Me
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center mb-20 md:mb-32">
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-4 leading-tight">AI Systems Engineer & Researcher</h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                Building and deploying scalable, end-to-end ML systems. Passionate about MLOps, NLP, and the infrastructure that makes AI work in the real world.
+            </p>
+            <div class="flex justify-center items-center space-x-6">
+                <a href="https://www.linkedin.com/in/ananthsriram1/" target="_blank" class="text-slate-500 hover:text-indigo-600 transition-colors icon-link">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://github.com/ananthsriram1" target="_blank" class="text-slate-500 hover:text-indigo-600 transition-colors icon-link">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-20 md:mb-32 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">About Me</h2>
+            <div class="max-w-4xl mx-auto text-slate-600 leading-relaxed space-y-6 text-lg">
+                <p>
+                    I'm a Computer Science student at the University of Maryland, graduating in May 2026. My passion lies at the intersection of machine learning and systems engineering. I don't just love building models; I'm obsessed with building the robust, scalable, and reliable infrastructure that makes them work in the real world.
+                </p>
+                <p>
+                    From engineering production-grade deployment pipelines at <strong>Capital One</strong> to creating a scalable AutoML SDK from scratch at <strong>ZoomInfo</strong>, my experience has been focused on the end-to-end lifecycle of AI products. I thrive on solving deep, complex systems challenges—whether it's debugging Docker runtime failures or architecting a data pipeline for a novel research initiative.
+                </p>
+                <p>
+                    Right now, I'm channeling this passion into my research, where I'm using Generative AI to automate the discovery of insights from scientific literature and satellite data. I'm always looking for the next hard problem to solve.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20 md:mb-32 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">Projects & Experience</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1: Capital One -->
+                <div class="card rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Production AI Pipeline</h3>
+                    <p class="text-slate-500 mb-4">Capital One</p>
+                    <p class="text-slate-600 mb-6">Engineered a containerized deployment pipeline for a GenAI application, automating a critical workflow and reducing update times by over 90%. Solved deep systems-level issues with Docker and AWS.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">Docker</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">AWS</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">MLOps</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">Selenium</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: ZoomInfo -->
+                <div class="card rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Scalable AutoML SDK</h3>
+                    <p class="text-slate-500 mb-4">ZoomInfo</p>
+                    <p class="text-slate-600 mb-6">Built an AutoML platform from scratch to automate the end-to-end model development lifecycle. Improved model accuracy by 26% and cut development time by 30% for data science teams.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">PyTorch</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">Scikit-learn</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">AutoML</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Music Detection App -->
+                <div class="card rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">AI Music Detection App</h3>
+                    <p class="text-slate-500 mb-4">Personal Project</p>
+                    <p class="text-slate-600 mb-6">Developed a full-stack app to classify music as AI-generated or human-made by analyzing spectrograms with a CNN, achieving 92% accuracy. Built with a React frontend and Flask backend.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">PyTorch</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">React.js</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">Flask</span>
+                        <span class="tag text-xs font-medium px-2.5 py-1 rounded-full">Computer Vision</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="mb-20 md:mb-32 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">Research & Reading</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-slate-800">Automating Scientific Discovery</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        As a Research Intern at the University of Maryland, I'm currently spearheading a project to automate insight discovery from scientific literature. My work involves architecting a data pipeline that uses Generative AI and the ArXiv API to extract, analyze, and validate agricultural indices from research papers against real-world satellite data.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        This work builds on my foundational research which led to my co-authored publication, <a href="#" class="text-indigo-600 font-semibold hover:underline">"An Overview of Drones in Agriculture."</a>
+                    </p>
+                </div>
+                <div class="card rounded-xl p-8 text-center bg-slate-50 border-dashed">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">My Digital Bookshelf</h3>
+                    <p class="text-slate-600 mb-6">I maintain a public repository of my notes and analysis on the ML papers I'm reading. It's my way of learning in public and solidifying my understanding of the field's foundations.</p>
+                    <a href="https://github.com/ananthsriram1/ML-Paper-Notes" target="_blank" class="inline-block bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-900 transition-colors">
+                        View My Paper Notes
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Niche Interests Section -->
+        <section id="interests" class="text-center scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">Beyond the Code</h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+                When I'm not building systems or reading papers, you can usually find me deep in the world of sports analytics. I'm a huge football and basketball fan, and I love applying data and ML concepts to understand the game on a deeper level.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <div class="bg-white p-4 rounded-full shadow-sm border border-slate-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.59L7.41 14H5v-4h2.41L11 6.41V17.59zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                </div>
+                <div class="bg-white p-4 rounded-full shadow-sm border border-slate-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L8 12v7.93zM13 4.07c.83.2 1.6.52 2.27.93l-2.27 2.27V4.07zM4.26 14.47c-.17-.51-.26-1.06-.26-1.64 0-3.31 2.69-6 6-6 .69 0 1.35.12 1.97.33L4.26 14.47zM13 19.94v-7.07l7.07 7.07c-.47.23-1 .4-1.57.53-.59.13-1.2.2-1.84.2-1.29 0-2.51-.31-3.66-.87z"/></svg>
+                </div>
+                <div class="bg-white p-4 rounded-full shadow-sm border border-slate-200">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" fill="currentColor"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57l3.43 3.43L7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <div class="flex justify-center items-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/ananthsriram1/" target="_blank" class="hover:text-white transition-colors">
+                    LinkedIn
+                </a>
+                <span>&bull;</span>
+                <a href="https://github.com/ananthsriram1" target="_blank" class="hover:text-white transition-colors">
+                    GitHub
+                </a>
+                <span>&bull;</span>
+                <a href="mailto:asriram2@terpmail.umd.edu" class="hover:text-white transition-colors">
+                    Email
+                </a>
+            </div>
+            <p>&copy; 2025 Ananth Sriram. Built with passion and a little bit of code.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
