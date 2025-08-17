@@ -41,15 +41,20 @@
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-slate-800">Ananth Sriram</a>
-            <div class="hidden md:flex space-x-6">
+            <div class="hidden md:flex items-center space-x-6">
                 <a href="#about" class="text-slate-600 hover:text-indigo-600 transition-colors">About</a>
                 <a href="#projects" class="text-slate-600 hover:text-indigo-600 transition-colors">Projects</a>
                 <a href="#research" class="text-slate-600 hover:text-indigo-600 transition-colors">Research</a>
                 <a href="#interests" class="text-slate-600 hover:text-indigo-600 transition-colors">Interests</a>
             </div>
-            <a href="mailto:asriram2@terpmail.umd.edu" class="hidden md:block bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">
-                Contact Me
-            </a>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="./Ananth_Sriram_resume.pdf" target="_blank" class="text-slate-600 hover:text-indigo-600 transition-colors text-sm font-semibold">
+                    Resume
+                </a>
+                <a href="mailto:asriram2@terpmail.umd.edu" class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">
+                    Contact Me
+                </a>
+            </div>
         </nav>
     </header>
 
@@ -74,7 +79,6 @@
         <!-- About Section -->
         <section id="about" class="mb-20 md:mb-32 scroll-mt-20">
             <h2 class="text-3xl font-bold text-center mb-12 section-title">About Me</h2>
-            <!-- ADDED text-center HERE to center all content inside -->
             <div class="max-w-4xl mx-auto text-slate-600 leading-relaxed space-y-6 text-lg text-center">
                 <p>
                     I'm a Computer Science student at the University of Maryland, graduating in May 2026. I'm passionate about creating ML applications for things I'm passionate about, whether it's for personal interests or for issues that I care about!
@@ -82,12 +86,6 @@
                 <p>
                     Right now, I'm channeling this passion into my research, where I'm using Generative AI to automate the discovery of insights from scientific literature and satellite data. I'm always looking for the next hard problem to solve.
                 </p>
-                <!-- This div is no longer needed to center the button, but good for spacing -->
-                <div class="pt-6">
-                    <a href="./Ananth_Sriram_resume.pdf" target="_blank" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all transform hover:scale-105">
-                        View My Resume
-                    </a>
-                </div>
             </div>
         </section>
 
